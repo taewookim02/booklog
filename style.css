@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 132rem;
+  padding: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.nav__login:link,
+.nav__login:visited {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.nav__login:hover {
+  background-color: #eee;
+}
+
+.nav__login:active {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.main__info {
+  margin-top: 6.4rem;
+}
+
+.main__info > p:first-child {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.main__info > p:last-child {
+  font-size: 2.4rem;
+}
+
+.main__books {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  /* grid-template-rows: min-content; */
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  /* background-color: #aaa; */
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.card > h2 {
+  font-size: 1.8rem;
+}
+
+.card > p {
+  font-size: 1.4rem;
+}
+
+.card:first-child {
+  border: 1px dashed #333;
+}
