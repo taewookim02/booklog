@@ -8,6 +8,7 @@ html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
   color: #333;
+  min-height: 100vh;
 }
 
 body {
@@ -88,4 +89,102 @@ body {
 
 .card:first-child {
   border: 1px dashed #333;
+  display: flex;
+  font-size: 3.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:first-child:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.card:first-child:active {
+  background-color: #aaa;
+}
+
+.card:first-child > .add {
+  user-select: none;
+}
+
+/* MODAL */
+
+aside {
+  position: absolute;
+}
+
+/* FORMS */
+
+input[type="text"],
+input[type="number"],
+textarea,
+select,
+button {
+  width: 15rem;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  appearance: none;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="number"],
+button[type="submit"] {
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  font-size: 1.4rem;
+  padding: 2px;
+}
+
+.form {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__ul {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  padding-top: 0.8rem;
+}
+
+label:first-child {
+  padding-top: 0.4rem;
+}
+
+button[type="submit"] {
+  margin-top: 1.6rem;
+  font-size: inherit;
+}
+
+.checkbox-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+ul {
+  list-style-type: none;
 }
