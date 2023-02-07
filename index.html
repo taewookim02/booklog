@@ -64,32 +64,34 @@
         </div>
       </div>
     </main>
-    <aside>
-      <form action="" method="post" class="form">
-        <h2>Book Data</h2>
-        <ul class="form__ul">
-          <label for="title">Title:</label>
-          <li>
-            <input type="text" id="title" name="book_title" required>
-          </li>
-          <label for="author">Author:</label>
-          <li>
-            <input type="text" id="author" name="book_author" required>
-          </li>
-          <label for="pages">Pages:</label>
-          <li>
-            <input type="number" id="pages" name="book_pages" max="15000" min="1" required>
-          </li>
-          <li class="checkbox-li">
-            <label for="read">Finished the book?</label>
-            <input type="checkbox" name="book_read" id="read">
-          </li>
-          <li>
-            <button type="submit">Submit</button>
-          </li>
-        </ul>
-      </form>
-    </aside>
+    <div class="modal">
+      <div class="modal__content">
+        <form action="" method="post" class="form">
+          <h2>Book Data</h2>
+          <ul class="form__ul">
+            <label for="title">Title:</label>
+            <li>
+              <input type="text" id="title" name="book_title" required>
+            </li>
+            <label for="author">Author:</label>
+            <li>
+              <input type="text" id="author" name="book_author" required>
+            </li>
+            <label for="pages">Pages:</label>
+            <li>
+              <input type="number" id="pages" name="book_pages" max="15000" min="1" required>
+            </li>
+            <li class="checkbox-li">
+              <label for="read">Finished the book?</label>
+              <input type="checkbox" name="book_read" id="read">
+            </li>
+            <li>
+              <button type="submit">Submit</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
     <footer>
 
     </footer>
