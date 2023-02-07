@@ -80,7 +80,17 @@ body {
   padding: 15px;
 }
 
-.card > h2 {
+.card__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__heading > svg {
+  cursor: pointer;
+}
+
+.card h2 {
   font-size: 1.8rem;
 }
 
@@ -176,6 +186,16 @@ input[type="number"] {
   flex-direction: column;
 }
 
+.form__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button__close:hover {
+  cursor: pointer;
+}
+
 label {
   padding-top: 0.8rem;
 }
@@ -208,6 +228,7 @@ button[type="submit"]:active {
 input[type="checkbox"] {
   width: 1.6rem;
   height: 1.6rem;
+  border: 2px solid blue;
 }
 
 aside {
