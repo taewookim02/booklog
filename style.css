@@ -101,6 +101,7 @@ body {
 .card:first-child {
   border: 1px dashed #333;
   display: flex;
+  flex-direction: column;
   font-size: 3.2rem;
   justify-content: center;
   align-items: center;
@@ -117,6 +118,10 @@ body {
 
 .card:first-child > .add {
   user-select: none;
+}
+
+.add__helper {
+  font-size: 1.4rem;
 }
 
 /* MODAL */
@@ -140,8 +145,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 3rem;
+  padding: 5rem;
   border-radius: 0.5rem;
+}
+
+.closed {
+  display: none;
 }
 
 /* FORMS */
