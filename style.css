@@ -67,8 +67,9 @@ body {
 .main__books {
   margin-top: 3.2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   /* grid-template-rows: min-content; */
+  /* grid-auto-rows: repeat(auto-fit, minmax(30rem, 1fr)); */
   justify-content: center;
   gap: 1.5rem;
 }
@@ -86,8 +87,17 @@ body {
   justify-content: space-between;
 }
 
-.card__heading > svg {
+.card__heading svg {
   cursor: pointer;
+}
+
+.card__heading svg:hover {
+  fill: red;
+}
+
+.card__heading--icons {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .card h2 {
@@ -116,11 +126,12 @@ body {
   background-color: #aaa;
 }
 
-.card:first-child > .add {
+.card:first-child {
   user-select: none;
 }
 
 .add__helper {
+  margin-top: -0.5rem;
   font-size: 1.4rem;
 }
 
