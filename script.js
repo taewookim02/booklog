@@ -12,7 +12,7 @@ function Book(title, author, pages, read) {
   };
 }
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
+const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, true);
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
@@ -30,6 +30,36 @@ let formTitle = document.querySelector(".form__title");
 let formAuthor = document.querySelector(".form__author");
 let formPages = document.querySelector(".form__pages");
 let formRead = document.querySelector(".form__read").checked;
+// const editButtons = document.querySelectorAll(".card__edit");
+// const deleteButtons = document.querySelectorAll(".card__delete");
+const container = document.querySelector(".container");
+
+document.addEventListener("DOMContentLoaded", (e) => {
+  myLibrary.forEach((book) => {
+    initialBookLoad(book);
+  });
+});
+
+// container.addEventListener("click", (e) => {
+//   console.log(e.target);
+//   if (e.target.matches(".card__edit")) {
+//     console.log("Hio!");
+//   } else if (e.target.matches(".card__delete")) {
+//     console.log("Del!");
+//   }
+// });
+
+container.addEventListener("click", (e) => {
+  let target = e.target.closest(".card__edit");
+  if (target) {
+    console.log("Hio!");
+  } else {
+    target = e.target.closest(".card__delete");
+    if (target) {
+      console.log("Del!");
+    }
+  }
+});
 
 modalContent.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -46,12 +76,6 @@ buttonClose.addEventListener("click", (e) => {
 cardFirst.addEventListener("click", (e) => {
   overlay.classList.toggle("closed");
   formTitle.focus();
-});
-
-document.addEventListener("DOMContentLoaded", (e) => {
-  myLibrary.forEach((book) => {
-    initialBookLoad(book);
-  });
 });
 
 // forms
@@ -169,5 +193,6 @@ function initialBookLoad(book) {
   cardFirst.insertAdjacentHTML("afterend", newElementHTML);
 }
 
-// Edit book data
 // let myLibrary = [];
+
+// Remove book

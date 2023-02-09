@@ -95,6 +95,40 @@ body {
   fill: red;
 }
 
+svg:hover {
+  fill: #aaa;
+}
+
+svg:hover polyline {
+  stroke: #aaa;
+}
+
+svg:hover path {
+  stroke: #aaa;
+}
+
+svg:hover line {
+  stroke: #aaa;
+}
+
+svg:active {
+  fill: #333;
+}
+
+svg:active polyline {
+  stroke: #333;
+}
+
+svg:active path {
+  stroke: #333;
+}
+
+svg:active line {
+  stroke: #333;
+}
+
+/* path, line */
+
 .card__heading--icons {
   display: flex;
   gap: 0.5rem;
@@ -138,7 +172,6 @@ body {
 /* MODAL */
 
 .modal {
-  /* display: none; */
   position: fixed;
   z-index: 1;
   left: 0;
