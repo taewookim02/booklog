@@ -171,7 +171,8 @@ svg:active line {
 
 /* MODAL */
 
-.modal {
+.modal,
+.modal__delete {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -183,7 +184,8 @@ svg:active line {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal__content {
+.modal__content,
+.modal__content--delete {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -300,4 +302,50 @@ form {
 
 ul {
   list-style-type: none;
+}
+
+.modal__content--delete {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 2.5rem;
+}
+
+.modal__asking {
+  text-align: center;
+}
+
+.modal__asking--buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.button__yes,
+.button__no {
+  cursor: pointer;
+  border: 1px solid black;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.button__yes {
+  background-color: rgb(255, 160, 160);
+}
+
+.button__yes:hover {
+  background-color: rgb(255, 135, 135);
+}
+
+.button__yes:active {
+  background-color: rgb(255, 80, 80);
+}
+
+.button__no:hover {
+  background-color: #eee;
+}
+
+.button__no:active {
+  background-color: #aaa;
 }

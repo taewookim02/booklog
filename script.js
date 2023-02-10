@@ -47,15 +47,11 @@ container.addEventListener("click", (e) => {
 
   if (target) {
     editButtonHandler(target.closest("[data-index]"));
-    // dataIndex = target.closest(".card").dataset.index;
-    // console.log(dataIndex);
   }
 
   target = e.target.closest(".card__delete");
   if (target) {
     deleteButtonHandler(target.closest("[data-index]"));
-    // dataIndex = target.closest(".card").dataset.index;
-    // console.log(dataIndex);
   }
 });
 
@@ -63,8 +59,10 @@ modalContent.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
-overlay.addEventListener("click", (e) => {
-  overlay.classList.toggle("closed");
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".modal__delete")) {
+    e.target.closest(".modal__delete").classList.toggle("closed");
+  }
 });
 
 buttonClose.addEventListener("click", (e) => {
@@ -99,7 +97,6 @@ document.addEventListener("click", (e) => {
     // reset index
     currentEditingIndex = null;
 
-    // close modal
     e.target.closest(".modal").classList.toggle("closed");
   }
 });
@@ -109,7 +106,13 @@ document.addEventListener("click", (e) => {
     return e.stopPropagation();
   }
   if (e.target.closest(".modal") || e.target.closest(".button__close")) {
-    e.target.closest(".modal").classList.toggle("closed");
+    // e.target.closest(".modal").classList.toggle("closed");
+    const modal = e.target.closest(".modal");
+    if (!modal.classList.contains("closed")) {
+      modal.classList.add("closed");
+    } else {
+      modal.classList.remove("closed");
+    }
   }
 });
 
@@ -118,8 +121,6 @@ function editButtonHandler(cardDiv) {
   const index = cardDiv.dataset.index;
   const listItem = myLibrary[index];
   currentEditingIndex = index;
-  // listItem.pages = 222;
-  console.log(listItem);
 
   // bring out a form for the item
   const formString = `
@@ -178,6 +179,7 @@ function editButtonHandler(cardDiv) {
 }
 
 function deleteButtonHandler(cardDiv) {
+  // popup
   const index = cardDiv.dataset.index;
   myLibrary.splice(index, 1);
   cardDiv.remove();
@@ -220,7 +222,7 @@ function updateBookToView(title, author, pages, read, index) {
 
   bookTitle.textContent = title;
   bookAuthor.textContent = author;
-  bookPages.textContent = pages;
+  bookPages.textContent = `${pages} ${pages > 1 ? "pages" : "page"}`;
   bookRead.textContent = read ? "✅Finished reading" : "🟡Currently reading";
 }
 
@@ -261,7 +263,7 @@ function addBookToView(bookList) {
               </svg>
             </div>
           </div>
-          <p class="book__author">Author: ${book.author}</p>
+          <p class="book__author">${book.author}</p>
           <p class="book__pages">${book.pages} ${
     book.pages > 1 ? "pages" : "page"
   }</p>
@@ -307,7 +309,7 @@ function initialBookLoad(book, i) {
               </svg>
             </div>
           </div>
-          <p class="book__author">Author: ${book.author}</p>
+          <p class="book__author">${book.author}</p>
           <p class="book__pages">${book.pages} ${
     book.pages > 1 ? "pages" : "page"
   }</p>
