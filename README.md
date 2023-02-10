@@ -2,7 +2,7 @@
 
 ![Preview of booklog](preview.gif)
 
-Live preview: https://taewookim02.github.io/library/
+Live preview: https://taewookim02.github.io/booklog/
 
 A web-based application to manage a personal library of books.
 
