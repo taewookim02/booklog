@@ -1,4 +1,4 @@
-# Library
+# booklog
 
 ![Preview of booklog](preview.gif)
 
