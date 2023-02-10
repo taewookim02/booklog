@@ -28,7 +28,7 @@ body {
 }
 
 .nav__logo {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 
@@ -36,19 +36,18 @@ body {
 .nav__login:visited {
   color: inherit;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   padding: 1rem 1.5rem;
-  background-color: #ddd;
+  background-color: #eee;
   border-radius: 5px;
 }
 
 .nav__login:hover {
-  background-color: #eee;
+  background-color: #d5d5d5;
 }
 
 .nav__login:active {
   background-color: #aaa;
-  color: #fff;
 }
 
 .main__info {
