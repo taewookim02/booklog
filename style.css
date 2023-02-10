@@ -217,7 +217,8 @@ button {
 
 input[type="text"],
 input[type="number"],
-button[type="submit"] {
+button[type="submit"],
+button[type="button"] {
   border: 1px solid #333;
   border-radius: 0.5rem;
 }
@@ -257,18 +258,21 @@ form > h2 {
   padding-bottom: 0.4rem;
 }
 
-button[type="submit"] {
+button[type="submit"],
+button[type="button"] {
   margin-top: 1.6rem;
   font-size: inherit;
   padding: 0.8rem 0;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+button[type="button"]:hover {
   background-color: #eee;
   cursor: pointer;
 }
 
-button[type="submit"]:active {
+button[type="submit"]:active,
+button[type="button"]:active {
   background-color: #aaa;
 }
 
